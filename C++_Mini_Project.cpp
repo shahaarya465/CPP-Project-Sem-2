@@ -1,5 +1,9 @@
 #include <iostream>
 #include <cstdlib>
+#include <ctime>
+#define ROCK 1
+#define PAPER 2
+#define SCISSORS 3
 int main()
 {
     srand(time(0));
@@ -22,4 +26,8 @@ int main()
                 break;
         }
     return 0;
+}
+int rand_num()
+{
+    return rand() % 10 + 1;
 }
