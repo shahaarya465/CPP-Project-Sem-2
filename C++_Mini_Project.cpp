@@ -57,14 +57,15 @@ void playCasino()
 
 void playRockPaperScissors() 
 {
+    again:
     int player_throw = 0;
     int ai_throw = 0;
     bool draw = false;
     do {
         cout << "Select your throw." << endl;
-        cout << "1) Rock" << endl;
-        cout << "2) Paper" << endl;
-        cout << "3) Scissors" << endl;
+        cout << "1 for Rock" << endl;
+        cout << "2 for Paper" << endl;
+        cout << "3 for Scissors" << endl;
         cout << "Selection: ";
         cin >> player_throw;
         cout << endl;
@@ -112,15 +113,16 @@ void playRockPaperScissors()
             cout << "ROCK beats SCISSORS! YOU LOSE." << endl;
         }
         cout << endl;
-    } 
-        while (draw);
+    } while (draw);
+     goto again;
 }
 
 int main()
 {
     srand(time(0));
     int choice;
-    cout<<"Welcome to the Game Menu!" << endl;
+    cout<<"Welcome!" << endl;
+    cout<<"Select a Game from the Menu to play:" << endl;
     cout<<"1. Play Casino Game" << endl;
     cout<<"2. Play Rock-Paper-Scissors Game" << endl;
     cout<<"Enter 1 for Casino Game and 2 for Rock-Paper-Scissors Game: ";
